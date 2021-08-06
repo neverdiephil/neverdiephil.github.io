@@ -1,46 +1,41 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css">
+    <title>n3V3rdI3</title>
 </head>
-
 <body>
-  <h1>MyGallery</h1>
-  <ul id="photos"></ul>
+    <h1>n3V3rdI3</h1>
 
-  <script>
+    <div class="gallery" id="gallery">
+        
+    </div>
+    <script>
 
-    function getRandomSize(min, max) {
-      return Math.round(Math.random() * (max - min) + min);
-    }
-
-
-    function run() {
-      document.querySelector('#photos').style.opacity = "0";
-      var allImages = "";
-
-      for (var i = 0; i < 25; i++) {
-        var width = getRandomSize(200, 400);
-        var height = getRandomSize(200, 400);
-        allImages += '<li><img src="https://placekitten.com/' + width + '/' + height + '" alt="pretty kitty"></li>';
-      }
-      document.querySelector('#photos').innerHTML += allImages;
-      
-    }
-    run();
-    document.querySelector('#photos').style.opacity = "1";
-
-  </script>
+        function getRandomSize(min, max) {
+          return Math.round(Math.random() * (max - min) + min);
+        }
+    
+    
+        function run() {
+          document.querySelector('#gallery').style.opacity = "0";
+          var allImages = "";
+    
+          for (var i = 0; i < 25; i++) {
+            var width = getRandomSize(200, 400);
+            var height = getRandomSize(200, 400);
+            allImages += '<div class="gallery-item"><div class="content"><img src="https://placekitten.com/' + width + '/' + height + '" alt="pretty kitty"></div></div>';
+          }
+          document.querySelector('#gallery').innerHTML += allImages;
+          
+        }
+        run();
+        document.querySelector('#gallery').style.opacity = "1";
+    
+      </script>
+      <script src="./js.js"></script>
 </body>
-
 </html>
